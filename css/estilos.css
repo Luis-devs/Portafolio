@@ -79,12 +79,6 @@
             border-radius: 52%;
             box-shadow: 2px 4px 6px 7px rgba(12, 6, 6, 0.2);
         }
-        /*
-        #boton_arriba>button:hover {
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-        }*/
         
         section {
             height: auto;
@@ -121,36 +115,9 @@
             background: black;
             border-radius: 20px;
         }
-        /* progress[value] {
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    width: 150px;
-                    height: 10px;
-                }
-                
-                progress {
-                    vertical-align: baseline;
-                }
-                
-               
-                
-                progress[value]::-webkit-progress-bar {
-                    background-color: black;
-                    border-radius: 20px;
-                }
-                
-                label {
-                    padding-right: 10px;
-                    font-size: 1rem;
-                } */
         
         #sobremi {
-            /*padding-left: 1px;*/
-            /*padding-top: 4px;*/
             text-align: justify;
-            /*background-color: #66b5ff;
-        width: 90%;*/
         }
         
         #sobremi>h2 {
@@ -158,14 +125,12 @@
         }
         
         #conocimiento {
-            /*background-color: #083e70;*/
             text-align: center;
             height: 380px;
             margin-bottom: 40%;
         }
         
         .tarjetas {
-            /* margin-left: 6%;*/
             display: flex;
             justify-content: space-between;
         }
@@ -232,7 +197,6 @@
         
         #estudio,
         .tarjet {
-            /* background-color: blue;*/
             margin-top: 4vh!important;
             padding-top: 1vh;
             padding-bottom: 3vh;
@@ -250,8 +214,6 @@
             width: 100%;
             height: 100%;
             border-radius: 12px;
-            /*height: 5%;
-        min-height: 0%;*/
         }
         
         #contacto {
@@ -325,11 +287,6 @@
         }
         
         .contenedor_entrada:not(:placeholder-shown).contenedor_entrada:not(:focus)+.contenedor_label {
-            /* top: -.5rem;
-            left: .8rem;
-            z-index: 10;
-            font-size: 15px;
-            font-weight: 500;*/
             top: -.52rem;
             left: .8rem;
             font-size: 17px;
@@ -433,61 +390,9 @@
                 padding: 0;
                 margin: 0;
             }
-            /* #contacto {
-                        margin-top: 100vh;
-                    }*/
             .enviarcorreo {
                 width: 100%;
                 margin: 0;
                 padding: 0;
             }
         }
-        /*
-input {
-    font-size: 18px;
-    outline: none;
-    width: 65%;
-    padding-bottom: 6px;
-    padding-top: 6px;
-    margin-bottom: 22px;
-}
-
-textarea {
-    font-size: 18px;
-    outline: none;
-    width: 65%;
-    resize: none;
-}
-
-.enviarcorreo>form>label {
-    color: aqua;
-    font-size: 16px;
-    left: 38.6%;
-    transition: 0.5s ease all;
-    pointer-events: none;
-    padding-top: 9px;
-    position: absolute;
-}
-
-input:focus+label,
-textarea:focus+label {
-    padding-top: 0px;
-    z-index: 10;
-}
-
-input:focus+label,
-input:valid+label,
-textarea:valid+label,
-textarea:focus+label {
-    position: absolute;
-    padding-top: 0px;
-    color: rgb(3, 68, 189);
-    z-index: 10;
-}
-
-input:not(:placeholder-shown)input:not(:focus)+label {
-    padding-top: 0px;
-    z-index: 10;
-}
-
-*/
