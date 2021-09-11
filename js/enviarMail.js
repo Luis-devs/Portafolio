@@ -1,5 +1,6 @@
 boton = document.getElementById("env");
 boton.addEventListener("click", (e) => {
+    e.preventDefault();
     nombre = document.getElementById("nombre").value;
     email = document.getElementById("correo").value;
     asunto = document.getElementById("asunto").value;
@@ -44,47 +45,7 @@ boton.addEventListener("click", (e) => {
 
                     console.log('Ocurrio un error: ', error.status, error.text);
                 });
-        /*e.preventDefault();
-    $.ajax({
-        url: "../enviar/enviarMail.php",
-        data: {
-            nombre: nombre,
-            email: email,
-            asunto: asunto,
-            mensaje: mensaje
-        },
-        method: "POST",
-        cache: "false",
-        dataType: "text",
 
-        success: (resultado) => {
-            msjr = document.getElementById("res");
-            msjr.style.visibility = "visible";
-            msjr.style.display = "block";
-
-            boton.disabled = false;
-            boton.style.backgroundColor = "";
-            boton.value = "Enviar";
-            if (resultado) {
-
-                msjr.style.color = "green";
-
-                msjr.innerHTML = "<span>Email enviado correctamente</span>";
-                document.getElementById("nombre").value = "";
-                document.getElementById("correo").value = "";
-                document.getElementById("asunto").value = "";
-                document.getElementById("mensaje").value = "";
-
-
-            } else {
-                msjr.style.color = "red";
-                msjr.innerHTML = "<span>No se pudo enviar el email, inténtelo nuevamente</span>"
-            }
-
-        }
-
-    });
-*/
     } else {
         boton.disabled = false;
         boton.style.backgroundColor = "";
@@ -97,10 +58,4 @@ boton.addEventListener("click", (e) => {
         msjr.innerHTML = "<span>No se pudo enviar, algo esta mal, recuerde llenar todos los campos</span>";
 
     }
-
-
-
-
 });
-
-//});
