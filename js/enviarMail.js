@@ -47,6 +47,7 @@ boton.addEventListener("click", (e) => {
                 });
 
     } else {
+
         boton.disabled = false;
         boton.style.backgroundColor = "";
         boton.value = "Enviar";
