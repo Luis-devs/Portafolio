@@ -357,6 +357,7 @@ a:hover {
         width: 180%;
         margin-right: 200px;
         padding-right: 100px;
+        margin-bottom: 6px;
     }
     span {
         font-size: 15px;
