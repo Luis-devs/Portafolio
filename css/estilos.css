@@ -1,398 +1,476 @@
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Roboto", sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        header {
-            width: 100%;
-            margin: 0;
-            background-color: #001a33;
-            margin-top: -0.1%;
-            height: auto;
-        }
-        
-        nav {
-            width: 100%;
-            text-align: center;
-            height: auto;
-            max-height: 45px;
-            padding: 15px 0px;
-        }
-        
-        nav>a {
-            color: aliceblue;
-            font-size: 17px;
-            text-decoration: none;
-            margin-inline: 15px;
-        }
-        
-        nav>a:hover {
-            color: #66b5ff;
-            border-bottom: 2px solid white;
-        }
-        
-        main {
-            height: auto;
-            margin-top: 0px;
-            color: black;
-            width: 100%;
-        }
-        
-        .resultado {
-            display: none;
-            visibility: hidden;
-            font-size: 20px;
-            margin: 0 auto;
-            text-align: center;
-            height: 25px;
-        }
-        
-        .redes {
-            position: fixed;
-            left: 97%;
-            top: 50%;
-            right: 0;
-            width: 19px;
-        }
-        
-        .redes>a>img {
-            height: 40px;
-            width: 40px;
-        }
-        
-        #boton_arriba {
-            position: fixed;
-            top: 85%;
-            left: 93%;
-            display: none;
-            border-radius: 52%;
-            cursor: pointer;
-        }
-        
-        #boton_arriba>img {
-            width: 40px;
-            height: 38px;
-            border-radius: 52%;
-            box-shadow: 2px 4px 6px 7px rgba(12, 6, 6, 0.2);
-        }
-        
-        section {
-            height: auto;
-            width: 100%;
-            text-align: center;
-            padding-top: 12px;
-            padding-bottom: 14px;
-        }
-        
-        img {
-            height: 100px;
-            width: 100px;
-        }
-        
-        progress {
-            width: 85%;
-            height: 7px;
-            border: none;
-            border-radius: 4px;
-            background-color: #facacaa4;
-        }
-        
-        *::-webkit-progress-bar {
-            border-radius: 40px!important;
-            background-color: #facacaa4;
-        }
-        
-        *::-webkit-progress-value {
-            background: black;
-            border-radius: 3px;
-        }
-        
-        *::-moz-progress-bar {
-            background: black;
-            border-radius: 20px;
-        }
-        
-        #sobremi {
-            text-align: justify;
-        }
-        
-        #sobremi>h2 {
-            text-align: center;
-        }
-        
-        #conocimiento {
-            text-align: center;
-            height: 380px;
-            margin-bottom: 40%;
-        }
-        
-        .tarjetas {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .tarjeta {
-            border: 1px solid black;
-            cursor: pointer;
-            padding-top: 10px;
-            transition: 0.3s;
-            width: 14%;
-            height: 300px;
-            border-radius: 17px;
-            float: left;
-            margin-inline: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .tarjeta:hover {
-            box-shadow: 0 8px 16px 0 rgba(172, 66, 66, 0.2);
-            transform: translateY(-22px);
-            background-color: white;
-        }
-        
-        .descripcion {
-            margin-top: 20px;
-            padding-top: 20px;
-            margin-bottom: 50px;
-        }
-        
-        .proyectos,
-        .realizado,
-        .desc_pro {
-            margin-bottom: 40vh;
-            display: block;
-        }
-        
-        .realizado {
-            width: 230px;
-            height: 400px;
-            border: 1px solid black;
-            text-align: left;
-            margin: 0 auto;
-            padding-left: 15px;
-            border-radius: 14px;
-            cursor: pointer;
-        }
-        
-        .realizado:hover {
-            box-shadow: 0 12px 18px 0 rgba(172, 66, 66, 0.2);
-        }
-        
-        .realizado>a {
-            padding-left: 26px;
-        }
-        
-        a {
-            text-decoration: none;
-            color: #66b5ff;
-        }
-        
-        a:hover {
-            color: black;
-        }
-        
-        #estudio,
-        .tarjet {
-            margin-top: 4vh!important;
-            padding-top: 1vh;
-            padding-bottom: 3vh;
-        }
-        
-        .tarjet {
-            border: 1px solid black;
-            width: 35%;
-            height: 95vh;
-            margin: 0 auto;
-            border-radius: 12px;
-        }
-        
-        .tarjet>a>img {
-            width: 100%;
-            height: 100%;
-            border-radius: 12px;
-        }
-        
-        #contacto {
-            background-color: white;
-        }
-        
-        .enviarcorreo {
-            width: 350px;
-            height: 530px;
-            margin: 0 auto;
-            background-color: white;
-            padding-left: 49px;
-            padding-top: 16px;
-            border-radius: 14px;
-        }
-        
-        .enviarcorreo>span {
-            font-size: 22px;
-            padding-left: 0;
-        }
-        
-        .enviarcorreo>form {
-            margin-top: 22px;
-        }
-        
-        .contenedor_input {
-            position: relative;
-            height: 48px;
-            margin-bottom: 2rem;
-        }
-        
-        .contenedor_entrada {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 10px;
-            width: 80%;
-            font-size: 1rem;
-            border: 1px solid #DADCE0;
-            border-radius: .5rem;
-            padding: 1rem;
-            background: none;
-            z-index: 1;
-            resize: none;
-            outline: none;
-        }
-        
-        .contenedor_input>textarea {
-            height: 120px;
-            font-family: "Roboto", sans-serif;
-        }
-        
-        .contenedor_label {
-            position: absolute;
-            left: 1rem;
-            top: 1rem;
-            padding: 0 .25rem;
-            background-color: white;
-            color: #80868B;
-            font-size: 1rem;
-            transition: 1s;
-            pointer-events: none;
-        }
-        
-        .contenedor_entrada:focus+.contenedor_label {
-            top: -.52rem;
-            left: .8rem;
-            color: black;
-            font-size: 17px;
-            z-index: 10;
-        }
-        
-        .contenedor_entrada:not(:placeholder-shown).contenedor_entrada:not(:focus)+.contenedor_label {
-            top: -.52rem;
-            left: .8rem;
-            font-size: 17px;
-            z-index: 10;
-        }
-        
-        .contenedor_entrada:focus {
-            border: 1px solid black;
-        }
-        
-        .envio {
-            padding: 30%;
-        }
-        
-        .envio>input {
-            cursor: pointer;
-            background-color: black;
-            border: none;
-            width: 140px;
-            height: 45px;
-            color: white;
-            margin-left: -38px;
-            border-radius: 11px;
-            font-size: 17px;
-            outline: none;
-        }
-        
-        .envio>input:hover {
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-            box-shadow: 3px 9px 20px 4px rgba(172, 66, 66, 0.2);
-        }
-        
-        .contacto {
-            height: 100%;
-            width: 100%;
-            margin-top: 90px;
-            padding-bottom: 10px;
-        }
-        
-        .contacto>a>img {
-            height: 40px;
-            width: 60px;
-            background-size: cover;
-            padding-inline: 12px;
-        }
-        
-        @media screen and(min-width:632px) and (max-width:700px) {
-            .tarjetas {
-                flex-direction: column;
-            }
-            .tarjetas>.tarjeta>img {
-                width: 10px;
-                height: 10px;
-            }
-        }
-        
-        @media(max-width:300px) {
-            #conocimiento {
-                margin-top: 35vh;
-                width: 100%;
-                background-color: aqua;
-                margin-bottom: 10%;
-            }
-            .tarjetas {
-                width: 100%;
-                background-color: yellow;
-                flex-direction: column;
-                margin-bottom: 1%;
-                padding: 0;
-                margin: 0;
-            }
-            .tarjeta {
-                margin: 0;
-                width: 100%;
-                display: block;
-                margin-bottom: 20px;
-            }
-            .tarjeta>img {
-                height: 20px;
-                width: 20px;
-            }
-            .proyectos {
-                width: 100%;
-                margin-top: 5%;
-                margin-bottom: 60vh;
-            }
-            .realizado {
-                padding: 0;
-                width: 100%;
-                margin: 0;
-            }
-            #estudio {
-                display: block;
-                margin-top: 420vh;
-                margin-bottom: 10%;
-            }
-            .tarjet {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-            .enviarcorreo {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-        }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    background-color: #001a33;
+    margin-top: -0.1%;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    max-height: 45px;
+    padding: 15px 0px;
+}
+
+nav>a {
+    color: aliceblue;
+    font-size: 17px;
+    text-decoration: none;
+    margin-inline: 15px;
+}
+
+nav>a:hover {
+    color: #66b5ff;
+    border-bottom: 2px solid white;
+}
+
+main {
+    height: auto;
+    margin-top: 0px;
+    color: black;
+    width: 100%;
+}
+
+.resultado {
+    display: none;
+    visibility: hidden;
+    font-size: 17px;
+    margin: 0 auto;
+    text-align: center;
+    height: 30px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+section {
+    text-align: center;
+}
+
+.redes {
+    position: fixed;
+    left: 97%;
+    top: 40%;
+    right: 0;
+    width: 19px;
+}
+
+.redes>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+#boton_arriba {
+    position: fixed;
+    top: 85%;
+    left: 93%;
+    display: none;
+    border-radius: 52%;
+    cursor: pointer;
+}
+
+#boton_arriba>img {
+    width: 40px;
+    height: 38px;
+    border-radius: 52%;
+    box-shadow: 2px 4px 6px 7px rgba(12, 6, 6, 0.2);
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+progress {
+    width: 85%;
+    height: 7px;
+    border: none;
+    border-radius: 4px;
+    background-color: #facacaa4;
+}
+
+*::-webkit-progress-bar {
+    border-radius: 40px!important;
+    background-color: #facacaa4;
+}
+
+*::-webkit-progress-value {
+    background: black;
+    border-radius: 3px;
+}
+
+*::-moz-progress-bar {
+    background: black;
+    border-radius: 20px;
+}
+
+p {
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#conocimiento {
+    margin-bottom: 10%;
+}
+
+.tarjetas {
+    margin-bottom: 6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    border: 1px solid black;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: 0.3s;
+    width: 14%;
+    height: 300px;
+    border-radius: 17px;
+    float: left;
+    margin-inline: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 8px 16px 0 rgba(172, 66, 66, 0.2);
+    transform: translateY(-22px);
+    background-color: white;
+}
+
+.descripcion {
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.proyectos,
+.realizado,
+.desc_pro {
+    margin-bottom: 0;
+}
+
+.realizado {
+    width: 230px;
+    border: 1px solid black;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 15px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.realizado:hover {
+    box-shadow: 0 12px 18px 0 rgba(172, 66, 66, 0.2);
+}
+
+.realizado>a {
+    padding-left: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: #66b5ff;
+}
+
+a:hover {
+    color: black;
+}
+
+#estudio,
+.tarjet {
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    text-align: center;
+}
+
+.tarjet {
+    border: 1px solid black;
+    width: 35%;
+    height: 95vh;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.tarjet>a>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.enviarcorreo {
+    width: 350px;
+    height: 530px;
+    margin: 0 auto;
+    background-color: white;
+    padding-left: 49px;
+    padding-top: 16px;
+    border-radius: 14px;
+}
+
+.enviarcorreo>span {
+    font-size: 22px;
+    padding-left: 0;
+}
+
+.enviarcorreo>form {
+    margin-top: 22px;
+}
+
+.contenedor_input {
+    position: relative;
+    height: 48px;
+    margin-bottom: 2rem;
+}
+
+.contenedor_entrada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 80%;
+    font-size: 1rem;
+    border: 1px solid #DADCE0;
+    border-radius: .5rem;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+    resize: none;
+    outline: none;
+}
+
+.contenedor_input>textarea {
+    height: 120px;
+    font-family: "Roboto", sans-serif;
+}
+
+.contenedor_label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: white;
+    color: #80868B;
+    font-size: 1rem;
+    transition: 1s;
+    pointer-events: none;
+}
+
+.contenedor_entrada:focus+.contenedor_label {
+    top: -.52rem;
+    left: .8rem;
+    color: black;
+    font-size: 17px;
+    z-index: 10;
+}
+
+.contenedor_entrada:not(:placeholder-shown).contenedor_entrada:not(:focus)+.contenedor_label {
+    top: -.52rem;
+    left: .8rem;
+    font-size: 17px;
+    z-index: 10;
+}
+
+.contenedor_entrada:focus {
+    border: 1px solid black;
+}
+
+.envio {
+    padding: 30%;
+}
+
+.envio>input {
+    cursor: pointer;
+    background-color: black;
+    border: none;
+    width: 140px;
+    height: 45px;
+    color: white;
+    margin-left: -38px;
+    border-radius: 11px;
+    font-size: 17px;
+    outline: none;
+}
+
+.envio>input:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    box-shadow: 3px 9px 20px 4px rgba(172, 66, 66, 0.2);
+}
+
+.contacto {
+    height: 100%;
+    width: 100%;
+    margin-top: 90px;
+    padding-bottom: 10px;
+}
+
+.contacto>a>img {
+    height: 40px;
+    width: 60px;
+    background-size: cover;
+    padding-inline: 12px;
+}
+
+@media (min-width:301px)and (max-width:600px) {
+    .tarjetas {
+        width: 220px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .tarjeta {
+        width: 100%;
+    }
+    .tarjet {
+        width: 80%;
+        height: 45%;
+    }
+    .enviarcorreo {
+        width: 80%;
+    }
+    .enviarcorreo>form {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .envio {
+        padding: 31%;
+    }
+    .redes {
+        left: 89%;
+        z-index: 9999;
+        right: 10px;
+        display: inline-block;
+    }
+    .redes>a>img {
+        height: 100%;
+        width: 180%;
+        margin-right: 200px;
+        padding-right: 100px;
+    }
+    span {
+        font-size: 15px;
+    }
+    .resultado {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        line-height: 14px;
+    }
+    #boton_arriba {
+        left: 89vw;
+        z-index: 9999;
+    }
+    #boton_arriba>img {
+        height: 36px;
+        width: 36px;
+    }
+    #contacto>.contacto>a>img {
+        height: 37px;
+        width: 37px;
+        margin-left: 10px;
+        padding: 0;
+    }
+}
+
+@media(max-width:300px) {
+    nav {
+        padding-bottom: 29px;
+        padding-top: 4px;
+    }
+    nav>a {
+        font-size: 12px;
+    }
+    .tarjetas {
+        width: 90%;
+        flex-direction: column;
+        margin-bottom: 1%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .tarjeta {
+        margin: 0;
+        width: 90%;
+        display: block;
+        margin-bottom: 20px;
+        height: 200px;
+    }
+    .tarjeta>img {
+        height: 42px;
+        width: 42px;
+    }
+    .descripcion {
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+    #contacto>.contacto>a>img {
+        height: 35px;
+        width: 27px;
+        margin: 0;
+        padding: 0;
+    }
+    .resultado {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        line-height: 9px;
+    }
+    span {
+        font-size: 12px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    .realizado {
+        padding: 0;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .realizado>a>img {
+        margin: 0 auto;
+        display: list-item;
+    }
+    .tarjet {
+        width: 98%;
+        padding: 0;
+        margin: 0 auto;
+        height: 47%;
+    }
+    .enviarcorreo {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .envio>input {
+        margin-top: 8vh;
+    }
+    .redes {
+        left: 88vw;
+        z-index: 9999;
+    }
+    .redes>a>img {
+        height: 28px;
+        width: 28px;
+    }
+    h2 {
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    #boton_arriba {
+        left: 88vw;
+        z-index: 9999;
+    }
+    #boton_arriba>img {
+        height: 28px;
+        width: 28px;
+    }
+}
