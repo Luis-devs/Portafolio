@@ -21,13 +21,14 @@ nav {
     height: auto;
     max-height: 45px;
     padding: 15px 0px;
+    display: inline-block;
 }
 
 nav>a {
     color: aliceblue;
     font-size: 17px;
     text-decoration: none;
-    margin-inline: 15px;
+    margin-right: 17px;
 }
 
 nav>a:hover {
@@ -323,6 +324,30 @@ a:hover {
     padding-inline: 12px;
 }
 
+@media (min-width:601px)and (max-width:810px) {
+    .tarjetas {
+        flex-wrap: wrap;
+        align-content: space-around;
+        flex-direction: column;
+        width: 95%;
+        height: 650px;
+    }
+    .tarjeta {
+        width: 30%;
+    }
+    .tarjet {
+        width: 55%;
+    }
+    .redes {
+        left: 93%;
+        z-index: 9999;
+    }
+    #boton_arriba {
+        left: 93vw;
+        z-index: 9999;
+    }
+}
+
 @media (min-width:301px)and (max-width:600px) {
     .tarjetas {
         width: 220px;
@@ -358,7 +383,6 @@ a:hover {
         width: 180%;
         margin-right: 200px;
         padding-right: 100px;
-        margin-bottom: 6px;
     }
     span {
         font-size: 15px;
