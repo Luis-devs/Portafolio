@@ -155,10 +155,19 @@ p {
     margin-bottom: 50px;
 }
 
-.proyectos,
+.proyecto {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
 .realizado,
 .desc_pro {
     margin-bottom: 0;
+}
+
+.proyectos {
+    margin-right: 25px;
 }
 
 .realizado {
@@ -349,6 +358,15 @@ a:hover {
 }
 
 @media (min-width:301px)and (max-width:600px) {
+    .proyectos {
+        margin: 0;
+        margin-bottom: 9%;
+    }
+    .proyecto {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+    }
     .tarjetas {
         width: 220px;
         flex-direction: column;
@@ -409,6 +427,15 @@ a:hover {
 }
 
 @media(max-width:300px) {
+    .proyectos {
+        margin: 0;
+        margin-bottom: 9%;
+    }
+    .proyecto {
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+    }
     nav {
         padding-bottom: 29px;
         padding-top: 4px;
