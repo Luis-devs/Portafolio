@@ -1,3 +1,8 @@
+:root {
+    --verde: #198754;
+    --rojo: #dc3545;
+}
+
 html,
 body {
     margin: 0;
@@ -7,12 +12,25 @@ body {
     scroll-behavior: smooth;
 }
 
+.valid {
+    border: 1px solid var(--verde)!important;
+}
+
+.hpers {
+    height: 155px;
+}
+
+.invalid {
+    border: 1px solid var(--rojo)!important;
+}
+
 header {
     width: 100%;
     margin: 0;
     background-color: #001a33;
-    margin-top: -0.1%;
+    top: 0px;
     height: auto;
+    transition: ease-in .1s;
 }
 
 nav {
@@ -34,6 +52,17 @@ nav>a {
 nav>a:hover {
     color: #66b5ff;
     border-bottom: 2px solid white;
+}
+
+.active {
+    transition: ease-out .1s;
+    color: #66b5ff;
+    border-bottom: 2px solid white;
+}
+
+.empleo {
+    text-align: initial;
+    word-break: keep-all;
 }
 
 main {
@@ -61,7 +90,7 @@ section {
 .redes {
     position: fixed;
     left: 97%;
-    top: 40%;
+    top: 30%;
     right: 0;
     width: 19px;
 }
@@ -74,7 +103,7 @@ section {
 #boton_arriba {
     position: fixed;
     top: 85%;
-    left: 93%;
+    left: 97%;
     display: none;
     border-radius: 52%;
     cursor: pointer;
@@ -84,7 +113,6 @@ section {
     width: 40px;
     height: 38px;
     border-radius: 52%;
-    box-shadow: 2px 4px 6px 7px rgba(12, 6, 6, 0.2);
 }
 
 img {
@@ -121,13 +149,13 @@ p {
 }
 
 #conocimiento {
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 }
 
 .tarjetas {
     margin-bottom: 6%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .tarjeta {
@@ -135,12 +163,12 @@ p {
     cursor: pointer;
     padding-top: 10px;
     transition: 0.3s;
-    width: 14%;
+    width: 239px;
     height: 300px;
     border-radius: 17px;
     float: left;
     margin-inline: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 23px;
 }
 
 .tarjeta:hover {
@@ -159,29 +187,31 @@ p {
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.proyectos {
+    width: 260px;
+    border-radius: 14px;
+    margin-right: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.proyectos:hover {
+    box-shadow: 0 12px 18px 0 rgba(172, 66, 66, 0.2);
 }
 
 .realizado,
 .desc_pro {
     margin-bottom: 0;
-}
-
-.proyectos {
-    margin-right: 25px;
+    padding: 1px 2px;
 }
 
 .realizado {
-    width: 230px;
-    border: 1px solid black;
     text-align: left;
-    margin: 0 auto;
     padding-left: 15px;
     border-radius: 14px;
-    cursor: pointer;
-}
-
-.realizado:hover {
-    box-shadow: 0 12px 18px 0 rgba(172, 66, 66, 0.2);
 }
 
 .realizado>a {
@@ -220,12 +250,13 @@ a:hover {
 
 .enviarcorreo {
     width: 350px;
-    height: 530px;
+    height: 540px;
     margin: 0 auto;
     background-color: white;
     padding-left: 49px;
     padding-top: 16px;
     border-radius: 14px;
+    margin-bottom: 9%;
 }
 
 .enviarcorreo>span {
@@ -237,10 +268,14 @@ a:hover {
     margin-top: 22px;
 }
 
+.input_cont {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
 .contenedor_input {
     position: relative;
     height: 48px;
-    margin-bottom: 2rem;
 }
 
 .contenedor_entrada {
@@ -257,6 +292,7 @@ a:hover {
     z-index: 1;
     resize: none;
     outline: none;
+    transition: .1s ease-in-out;
 }
 
 .contenedor_input>textarea {
@@ -295,10 +331,6 @@ a:hover {
     border: 1px solid black;
 }
 
-.envio {
-    padding: 30%;
-}
-
 .envio>input {
     cursor: pointer;
     background-color: black;
@@ -312,7 +344,8 @@ a:hover {
     outline: none;
 }
 
-.envio>input:hover {
+.envio>input:hover,
+.envio>input:focus {
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -322,7 +355,6 @@ a:hover {
 .contacto {
     height: 100%;
     width: 100%;
-    margin-top: 90px;
     padding-bottom: 10px;
 }
 
@@ -333,16 +365,29 @@ a:hover {
     padding-inline: 12px;
 }
 
-@media (min-width:601px)and (max-width:810px) {
-    .tarjetas {
-        flex-wrap: wrap;
-        align-content: space-around;
-        flex-direction: column;
-        width: 95%;
-        height: 650px;
-    }
+.sticky {
+    position: sticky;
+    z-index: 9999;
+    transition: ease-in-out .1s;
+}
+
+.lista_sobre_mi {
+    padding: 1px 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:811px)and (max-width:850px) {
     .tarjeta {
-        width: 30%;
+        justify-content: baseline;
+        width: 25%;
+        height: 270px;
+    }
+}
+
+@media (min-width:601px)and (max-width:810px) {
+    .tarjeta {
+        width: 230px;
     }
     .tarjet {
         width: 55%;
@@ -355,14 +400,27 @@ a:hover {
         left: 93vw;
         z-index: 9999;
     }
+    .proyectos {
+        width: 245px;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
 }
 
 @media (min-width:301px)and (max-width:600px) {
+    .contacto {
+        margin-top: 130px;
+    }
+    .envio>input {
+        margin-top: 8px;
+    }
     .proyectos {
-        margin: 0;
-        margin-bottom: 9%;
+        margin: 0 auto;
+        margin-bottom: 4%;
     }
     .proyecto {
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding: 0;
         margin: 0 auto;
@@ -386,9 +444,6 @@ a:hover {
         width: 100%;
         margin: 0 auto;
         margin-top: 18px;
-    }
-    .envio {
-        padding: 31%;
     }
     .redes {
         left: 89%;
@@ -427,11 +482,18 @@ a:hover {
 }
 
 @media(max-width:300px) {
+    .contacto {
+        margin-top: 160px;
+    }
     .proyectos {
-        margin: 0;
-        margin-bottom: 9%;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        width: 89%;
+        word-break: break-all;
     }
     .proyecto {
+        display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding: 0;
         margin: 0 auto;
@@ -439,9 +501,6 @@ a:hover {
     nav {
         padding-bottom: 29px;
         padding-top: 4px;
-    }
-    nav>a {
-        font-size: 12px;
     }
     .tarjetas {
         width: 90%;
@@ -454,7 +513,7 @@ a:hover {
         margin: 0;
         width: 90%;
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         height: 200px;
     }
     .tarjeta>img {
@@ -507,7 +566,7 @@ a:hover {
         margin-top: 8vh;
     }
     .redes {
-        left: 88vw;
+        left: 84%;
         z-index: 9999;
     }
     .redes>a>img {
@@ -519,7 +578,7 @@ a:hover {
         word-wrap: break-word;
     }
     #boton_arriba {
-        left: 88vw;
+        left: 84%;
         z-index: 9999;
     }
     #boton_arriba>img {
