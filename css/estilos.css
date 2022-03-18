@@ -120,6 +120,11 @@ img {
     width: 100px;
 }
 
+.sinimg {
+    height: auto!important;
+    width: auto!important;
+}
+
 progress {
     width: 85%;
     height: 7px;
