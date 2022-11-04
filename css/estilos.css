@@ -1,6 +1,7 @@
 :root {
     --verde: #198754;
     --rojo: #dc3545;
+    --curso:#FFC300;
 }
 
 html,
@@ -15,7 +16,21 @@ body {
 .valid {
     border: 1px solid var(--verde)!important;
 }
-
+.estudio-item:hover{
+    box-shadow:0 8px 16px 0 rgba(172, 66, 66, 0.2);
+}
+.cert{
+    color: var(--verde);
+}
+.curso{
+    color:var(--curso);
+}
+.descripcion-item{
+    text-align: left;
+}
+.descripcion-item h3{
+    margin-bottom: 2px;
+}
 .hpers {
     height: 155px;
 }
@@ -69,7 +84,7 @@ main {
     height: auto;
     margin-top: 0px;
     color: black;
-    width: 100%;
+    padding-left:9px;
 }
 
 .resultado {
@@ -188,7 +203,7 @@ p {
     margin-bottom: 50px;
 }
 
-.proyecto {
+.proyecto, .lista-estudios{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -201,6 +216,15 @@ p {
     margin-right: 12px;
     border: 1px solid black;
     cursor: pointer;
+}
+.estudio-item{
+    border-radius: 14px;
+    margin-right: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding:9px;
+    transition: all .3s ease;
+    margin-bottom: 15px;
 }
 
 .proyectos:hover {
@@ -254,11 +278,10 @@ a:hover {
 }
 
 .enviarcorreo {
-    width: 350px;
+    width: 500px;
     height: 540px;
     margin: 0 auto;
     background-color: white;
-    padding-left: 49px;
     padding-top: 16px;
     border-radius: 14px;
     margin-bottom: 9%;
@@ -297,7 +320,7 @@ a:hover {
     z-index: 1;
     resize: none;
     outline: none;
-    transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .contenedor_input>textarea {
@@ -343,7 +366,7 @@ a:hover {
     width: 140px;
     height: 45px;
     color: white;
-    margin-left: -38px;
+    margin-left: -61px;
     border-radius: 11px;
     font-size: 17px;
     outline: none;
@@ -414,10 +437,13 @@ a:hover {
 
 @media (min-width:301px)and (max-width:600px) {
     .contacto {
-        margin-top: 130px;
+        margin-top: 40px;
     }
     .envio>input {
         margin-top: 8px;
+    }
+    .estudio-item{
+        margin-bottom: 4%;
     }
     .proyectos {
         margin: 0 auto;
@@ -488,7 +514,7 @@ a:hover {
 
 @media(max-width:300px) {
     .contacto {
-        margin-top: 160px;
+        margin-top: 70px;
     }
     .proyectos {
         margin: 0 auto;
@@ -568,7 +594,8 @@ a:hover {
         padding: 0;
     }
     .envio>input {
-        margin-top: 8vh;
+        margin-top: 10px;
+        margin-left: 0;
     }
     .redes {
         left: 84%;
