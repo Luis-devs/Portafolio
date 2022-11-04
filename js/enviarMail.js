@@ -95,10 +95,12 @@ function validar() {
 }
 
 function enviar() {
+    
     boton.value = "Enviandoo...";
     boton.disabled = true;
     boton.style.backgroundColor = "gray";
     if (validar()) {
+        document.getElementById("redes-contacto").style.marginTop="70px";
         datos = {
             nombre: nombre,
             correo: email,
@@ -127,6 +129,7 @@ function enviar() {
                 });
 
     } else {
+        document.getElementById("redes-contacto").style.marginTop="220px";
         inp_nombre.addEventListener("keyup", validar, false);
         inp_email.addEventListener("keyup", validar, false);
         inp_asunto.addEventListener("keyup", validar, false);
