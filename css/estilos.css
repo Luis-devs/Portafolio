@@ -15,6 +15,7 @@ body {
 
 .valid {
     border: 1px solid var(--verde)!important;
+    caret-color: #000000;
 }
 .estudio-item:hover{
     box-shadow:0 8px 16px 0 rgba(172, 66, 66, 0.2);
@@ -37,6 +38,7 @@ body {
 
 .invalid {
     border: 1px solid var(--rojo)!important;
+    caret-color: var(--rojo);
 }
 
 header {
